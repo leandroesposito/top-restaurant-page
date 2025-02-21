@@ -1,3 +1,12 @@
+:root {
+    --background-color-coral: #FF6F61;
+    --background-color-mint: #A8E6CE;
+    --accent-colors: #FFD54F;
+    --text-color-heading: #6A1B9A;
+    --text-color-neutral: #FFF8E1;
+    --text-color-gray: #333333;
+}
+
 @font-face {
     font-family: "Playfair Display";
     src:
@@ -16,10 +25,28 @@
     font-style: italic;
 }
 
+@font-face {
+    font-family: "Lato";
+    src:
+        url("./fonts/Lato-Regular.woff2") format("woff2"),
+        url("./fonts/Lato-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
     margin: 0;
     padding: 0;
     font-size: 16px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #e6e6e6;
+    font-family: "Lato", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+header {
+    background-color: var(--background-color-coral);
 }
 
 .title {
@@ -27,5 +54,52 @@ body {
     font-family: "Playfair Display", 'Times New Roman', Times, serif;
     font-weight: bold;
     font-style: italic;
-    margin: 1rem 2rem;
+    padding: 1rem 2rem;
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+nav button {
+    padding: 1rem;
+    border: none;
+    background-color: var(--background-color-mint);
+    font-family: "Playfair Display";
+    font-weight: bold;
+    font-size: 1rem;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    cursor: pointer;
+}
+
+nav button:hover {
+    background-color: var(--accent-colors);
+}
+
+#content {
+    align-self: center;
+    box-sizing: content-box;
+    margin: 2rem;
+    width: 70vw;
+    background-color: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+    flex: 1;
+    padding: 3rem;
+}
+
+footer {
+    background-color: var(--background-color-coral);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: .5rem;
+    gap: .5rem;
+}
+
+footer .links {
+    display: flex;
+    gap: 2rem;
 }
