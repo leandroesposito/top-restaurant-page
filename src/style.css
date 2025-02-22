@@ -85,7 +85,8 @@ nav button {
     cursor: pointer;
 }
 
-nav button:hover {
+nav button:hover,
+nav button:focus {
     background-color: var(--accent-colors);
 }
 
@@ -140,7 +141,8 @@ nav button:hover {
     box-shadow: none;
 }
 
-.actions button:hover {
+.actions button:hover,
+.actions button:focus {
     background-color: var(--accent-colors);
 }
 
