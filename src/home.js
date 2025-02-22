@@ -16,47 +16,19 @@ function createSectionContent() {
     return createDiv("section-content");
 }
 
-function createDishContainer(name, description) {
-    const mainContainer = createDiv("dish-container");
-    const dishNameContainer = createDiv("dish-name");
-    const dishDescriptionContainer = createDiv("dish-description");
+function createItemContainer(containerName, field1, field2) {
+    const mainContainer = createDiv(containerName);
+    const field1Container = createDiv(field1.name);
+    const field2Container = createDiv(field2.name);
 
-    dishNameContainer.textContent = name;
-    dishDescriptionContainer.textContent = description;
+    field1Container.textContent = field1.value;
+    field2Container.textContent = field2.value;
 
-    mainContainer.appendChild(dishNameContainer);
-    mainContainer.appendChild(dishDescriptionContainer);
-
-    return mainContainer;
-};
-
-function createTestimonialContainer(content, name) {
-    const mainContainer = createDiv("testimonial");
-    const testimonialContentContainer = createDiv("testimonial-content");
-    const testimonialNameContainer = createDiv("testimonial-name");
-
-    testimonialContentContainer.textContent = content;
-    testimonialNameContainer.textContent = name;
-
-    mainContainer.appendChild(testimonialContentContainer);
-    mainContainer.appendChild(testimonialNameContainer);
+    mainContainer.appendChild(field1Container);
+    mainContainer.appendChild(field2Container);
 
     return mainContainer;
-};
-
-function createHourContainer(content, name) {
-    const mainContainer = createDiv("hour-container");
-    const hourDayContainer = createDiv("days");
-    const hourHourContainer = createDiv("hour");
-
-    hourDayContainer.textContent = content;
-    hourHourContainer.textContent = name;
-
-    mainContainer.appendChild(hourDayContainer);
-    mainContainer.appendChild(hourHourContainer);
-
-    return mainContainer;
-};
+}
 
 export default function createHome() {
     const homeFragment = document.createDocumentFragment();
@@ -99,7 +71,11 @@ export default function createHome() {
     ];
 
     dishes.forEach((dish) => {
-        const dishDiv = createDishContainer(dish.name, dish.description);
+        const dishDiv = createItemContainer(
+            "dish-container",
+            { name: "dish-name", value: dish.name },
+            { name: "dish-description", value: dish.description }
+        );
         dishesContent.appendChild(dishDiv);
     });
     dishesSection.appendChild(dishesContent);
@@ -127,7 +103,11 @@ export default function createHome() {
     ];
 
     testimonials.forEach((testimonial) => {
-        const testimonialDiv = createTestimonialContainer(testimonial.content, testimonial.name);
+        const testimonialDiv = createItemContainer(
+            "testimonial",
+            { name: "testimonial-content", value: testimonial.content },
+            { name: "testimonial-name", value: testimonial.name }
+        );
         testimonialsContent.appendChild(testimonialDiv);
     });
     testimonialsSection.appendChild(testimonialsContent);
@@ -160,7 +140,11 @@ export default function createHome() {
     ];
 
     hours.forEach((hour) => {
-        const hourDiv = createHourContainer(hour.days, hour.hour);
+        const hourDiv = createItemContainer(
+            "hour-container",
+            { name: "days", value: hour.days },
+            { name: "hour", value: hour.hour }
+        );
         hoursContainer.appendChild(hourDiv);
     });
     locationContent.appendChild(hoursContainer);
