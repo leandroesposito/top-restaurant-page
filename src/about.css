@@ -1,0 +1,35 @@
+.about-container {
+    display: grid;
+    gap: 4rem;
+    margin: 2rem;
+}
+
+.section-container {
+    display: grid;
+    gap: 2rem;
+    background-color: var(--background-color-coral);
+    padding: 2rem 1rem;
+    border-radius: 1rem;
+}
+
+.title-container {
+    text-align: center;
+    font-size: 2rem;
+    font-family: "Pacifico";
+    background-color: var(--background-color-mint);
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.subtitle-container {
+    text-align: center;
+    font-size: 1.3rem;
+    font-family: "Playfair Display", 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+.content-container {
+    justify-self: center;
+    max-width: 60ch;
+    font-size: 1.1rem;
+}
