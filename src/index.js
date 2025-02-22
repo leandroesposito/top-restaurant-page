@@ -1,7 +1,9 @@
 import "./style.css";
 import "./menu.css";
+import "./about.css";
 import createHome from "./home.js";
 import createMenu from "./menu.js";
+import createAbout from "./about.js";
 
 const contentLoader = (function () {
     function loadContent(container, contentGeneratorFunction) {
@@ -16,5 +18,6 @@ const contentLoader = (function () {
 
     homeBtn.addEventListener("click", () => loadContent(contentContainer, createHome));
     menuBtn.addEventListener("click", () => loadContent(contentContainer, createMenu));
+    aboutBtn.addEventListener("click", () => loadContent(contentContainer, createAbout));
     loadContent(contentContainer, createHome);
 })();
