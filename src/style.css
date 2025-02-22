@@ -82,7 +82,7 @@ nav button {
     color: var(--text-color-dark);
     font-family: "Playfair Display";
     font-weight: bold;
-    font-size: 1rem;
+    font-size: 1.5rem;
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
     cursor: pointer;
@@ -152,7 +152,7 @@ nav button:focus {
 
 .dishes .section-content {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 2rem;
     align-content: space-between;
 }
@@ -170,7 +170,6 @@ nav button:focus {
 
 
 .testimonials .section-content {
-
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -186,6 +185,7 @@ nav button:focus {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    font-size: 1.2rem;
 }
 
 .testimonial-name {
@@ -198,7 +198,7 @@ nav button:focus {
 
 .address {
     font-family: "Playfair Display", 'Times New Roman', Times, serif;
-    font-size: 1.5rem;
+    font-size: 2rem;
     margin-bottom: 2rem;
     text-align: center;
 }
@@ -207,7 +207,8 @@ nav button:focus {
     display: grid;
     gap: 2rem;
     justify-content: center;
-    grid-auto-columns: 50ch;
+    grid-auto-columns: 40ch;
+    font-size: 1.3rem;
 }
 
 .hour-container {
@@ -222,7 +223,6 @@ nav button:focus {
 
 .days {
     flex: 1;
-    font-size: 1.1rem;
     font-weight: bold;
     text-align: end;
     border-right: 2px solid black;
