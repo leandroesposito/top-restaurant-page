@@ -1,4 +1,4 @@
-function createDiv(...classes) {
+export function createDiv(...classes) {
     const newDiv = document.createElement("div");
 
     classes.forEach(c => newDiv.classList.add(c));
