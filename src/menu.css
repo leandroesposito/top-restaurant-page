@@ -1,0 +1,40 @@
+.tab-description {
+    font-family: "Playfair Display", 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+.menu-container {
+    margin: 2rem;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 30vw;
+    justify-content: center;
+    align-content: stretch;
+}
+
+.menu-dish {
+    background-color: var(--background-color-mint);
+    border-radius: 50% 20% / 10% 40%;
+    padding: 1rem;
+}
+
+.dish-name {
+    font-family: "Pacifico";
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.dish-description {
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.dish-price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: end;
+}
+
+.dish-price::before {
+    content: "$";
+}
