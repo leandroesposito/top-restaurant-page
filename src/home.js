@@ -33,11 +33,11 @@ function createItemContainer(containerName, field1, field2) {
 export default function createHome() {
     const homeFragment = document.createDocumentFragment();
 
-    const contentHeader = createDiv("content-header");
+    const tabHeader = createDiv("tab-header");
     const h1 = document.createElement("h1");
     h1.textContent = "Where Creativity Meets Flavor!";
-    contentHeader.appendChild(h1);
-    homeFragment.appendChild(contentHeader);
+    tabHeader.appendChild(h1);
+    homeFragment.appendChild(tabHeader);
 
     const actions = createDiv("section", "actions");
     const reserveButton = document.createElement("button");
