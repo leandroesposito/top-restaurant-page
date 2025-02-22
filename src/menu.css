@@ -13,7 +13,7 @@
 }
 
 .menu-dish {
-    background-color: var(--background-color-mint);
+    background-color: var(--background-color-secondary);
     border-radius: 50% 20% / 10% 40%;
     padding: 1rem;
 }

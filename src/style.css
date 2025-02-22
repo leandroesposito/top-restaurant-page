@@ -1,10 +1,11 @@
 :root {
-    --background-color-coral: #FF6F61;
-    --background-color-mint: #A8E6CE;
+    --background-color-main: #202020;
+    --background-color-secondary: #ff7300;
     --accent-colors: #FFD54F;
     --text-color-heading: #6A1B9A;
     --text-color-neutral: #FFF8E1;
-    --text-color-gray: #333333;
+    --text-color-light: #adadad;
+    --text-color-dark: #2c2c2c;
 }
 
 @font-face {
@@ -52,11 +53,12 @@ body {
     flex-direction: column;
     background-color: #e6e6e6;
     font-family: "Lato", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: var(--text-color-gray)
+    color: var(--text-color-dark)
 }
 
 header {
-    background-color: var(--background-color-coral);
+    background-color: var(--background-color-main);
+    color: var(--text-color-light);
 }
 
 .title {
@@ -76,7 +78,8 @@ header nav {
 nav button {
     padding: 1rem;
     border: none;
-    background-color: var(--background-color-mint);
+    background-color: var(--background-color-secondary);
+    color: var(--text-color-dark);
     font-family: "Playfair Display";
     font-weight: bold;
     font-size: 1rem;
@@ -132,7 +135,8 @@ nav button:focus {
     font-family: "Lato", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: bold;
     font-size: 1rem;
-    background-color: var(--background-color-coral);
+    background-color: var(--background-color-main);
+    color: var(--text-color-light);
     cursor: pointer;
 }
 
@@ -154,7 +158,7 @@ nav button:focus {
 }
 
 .dish-container {
-    background-color: var(--background-color-mint);
+    background-color: var(--background-color-secondary);
     padding: 1rem;
     border-radius: 1rem;
 }
@@ -175,7 +179,8 @@ nav button:focus {
 
 .testimonial {
     max-width: fit-content;
-    background-color: var(--background-color-coral);
+    background-color: var(--background-color-main);
+    color: var(--text-color-light);
     border-radius: 1rem;
     padding: 1rem;
     display: flex;
@@ -207,7 +212,7 @@ nav button:focus {
 
 .hour-container {
     display: flex;
-    background-color: var(--background-color-mint);
+    background-color: var(--background-color-secondary);
     border-radius: 1rem;
 }
 
@@ -228,7 +233,8 @@ nav button:focus {
 }
 
 footer {
-    background-color: var(--background-color-coral);
+    background-color: var(--background-color-main);
+    color: var(--text-color-light);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -239,4 +245,12 @@ footer {
 footer .links {
     display: flex;
     gap: 2rem;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer a:visited {
+    color: var(--text-color-light)
 }
